@@ -229,8 +229,7 @@ bash analysis/run_analysis.sh
 python analysis/mixed_effects.py
 ```
 
-## Project structure
-```
+
 
 ## Project structure
 
@@ -262,4 +261,5 @@ BeliefArena/
 │
 └── tests/
     └── ...                        # unittest suite (run via `python -m unittest discover`)
+
 ```
