@@ -1,0 +1,9 @@
+condition,label,n_trials,flip_rate_pct,accuracy_pct,mean_confidence
+prior,Prior,200,0.0,85.0,8.11
+strength_alone,Strength (alone),200,14.000000000000002,99.0,8.265
+majority_plain_alone,Majority plain (alone),200,17.0,86.0,6.44
+majority_vague_alone,Majority vague (alone),200,19.0,93.0,6.595
+credibility_alone,Credibility (alone),200,16.0,98.0,8.465
+strength_vs_majority,Strength vs majority,200,14.499999999999998,99.5,6.68
+majority_vs_credibility,Majority vs credibility,200,19.5,93.5,6.135
+strength_vs_credibility,Strength vs credibility,200,13.5,90.5,6.85

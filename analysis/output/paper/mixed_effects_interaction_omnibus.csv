@@ -1,0 +1,4 @@
+outcome,test,df,statistic,p_value
+confidence,Wald omnibus (condition × model),7,155.65751954481152,2.6282471220964318e-30
+accuracy,Wald omnibus (condition × model),7,57.06237569410566,5.809405565255111e-10
+belief_flip,Wald omnibus (condition × model),6,25.533955110905083,0.00027183459038677835

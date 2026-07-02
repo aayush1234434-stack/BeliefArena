@@ -1,0 +1,63 @@
+{
+  "dataset_version": "1.1.0",
+  "frozen_date": "2026-07-02",
+  "schema_version": "v1",
+  "primary_file": "results_clean.jsonl",
+  "status": "frozen",
+  "row_count": 1600,
+  "rows_required": 1600,
+  "rows_in_results_dir": 1600,
+  "models": [
+    "meta/llama-3.1-8b-instruct",
+    "qwen/qwen3.5-122b-a10b"
+  ],
+  "questions_per_model": 100,
+  "conditions_per_model": 8,
+  "conditions": [
+    "prior",
+    "strength_alone",
+    "majority_plain_alone",
+    "majority_vague_alone",
+    "credibility_alone",
+    "strength_vs_majority",
+    "majority_vs_credibility",
+    "strength_vs_credibility"
+  ],
+  "archived_releases": [
+    {
+      "dataset_version": "1.0.0",
+      "frozen_date": "2026-07-02",
+      "file": "results_clean_v1.0.0_invalid.jsonl",
+      "row_count": 1600,
+      "passes_strict_validation": false,
+      "error_count_at_freeze": 42,
+      "invalid_confidence_zero_rows": 41,
+      "note": "Superseded — retained for reproducibility of earlier paper runs only"
+    }
+  ],
+  "source_provenance": {
+    "derived_from": "results/",
+    "deduplication": "last row wins on (model, question_id, condition)",
+    "repair_workflow": "scripts/repair_and_freeze.sh",
+    "repair_completed": "2026-07-02",
+    "trials_recollection": 41
+  },
+  "validation": {
+    "validator": "validate_results.py",
+    "passes_strict_validation": true,
+    "primary_file_present": true,
+    "invalid_confidence_zero_rows_purged_from_results": 41,
+    "invalid_confidence_models": ["meta/llama-3.1-8b-instruct"],
+    "invalid_confidence_note": "41 schema-invalid Llama rows purged and re-collected before v1.1.0 freeze"
+  },
+  "exclusions": {
+    "prompt": "1559/1600 rows lack prompt field (legacy v1 collection)",
+    "raw_response": "1559/1600 rows lack raw_response field (legacy v1 collection)"
+  },
+  "known_limitations": [
+    "1559/1600 rows lack prompt/raw_response audit fields from legacy collection",
+    "Temperature 0.7; single sample per trial",
+    "100 questions; binary yes/no only",
+    "Two models on NVIDIA NIM API only"
+  ]
+}

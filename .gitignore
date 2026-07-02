@@ -1,0 +1,26 @@
+# Virtual environments
+new_env/
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS / tooling
+.DS_Store
+.mplconfig/
+
+# Local secrets (never commit API keys)
+.env
+.env.*
